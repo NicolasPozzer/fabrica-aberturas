@@ -1,0 +1,123 @@
+/*-------------------------------------*/
+/*--------ESTILO FADE CUADRANTE--------------*/
+/*-------------------------------------*/
+.nombreE{
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 1rem;
+
+}
+
+.cuadrante {
+    
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 50px 70px;
+
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+  
+}
+
+
+
+/* Agrega un borde sólido al elemento */
+.cuadrante:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        #1c8eff,#e330fff0, #1c8eff,#e330fff0,
+        #1c8eff,#e330fff0, #1c8eff,#e330fff0
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 35s linear infinite;
+}
+
+
+@keyframes glowing  {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }
+/*-------------------------------------*/
+/*--------ESTILO FADE CUADRANTE--------------*/
+/*-------------------------------------*/
+
+/* TEXTO */
+.hover-hide {
+    
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  .cuadrante:hover .hover-hide {
+    
+    opacity: 0;
+    text-align: center;
+  }
+
+
+
+/*-------------------------------------*/
+/*--------ESTILO FADE BOTON--------------*/
+/*-------------------------------------*/
+
+.hover-hide-playdemo {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: black;
+    border: none;
+    padding: 6px 12px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  .cuadrante:hover .hover-hide-playdemo {
+    opacity: 1;
+    transition: color 2s ease;
+    color: rgb(58, 156, 255);
+  }
+/* TEXTO */
+
+/* Estilos adicionales */
+.row {
+    max-width: 100%;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+.fa-solid.fa-trash.fa-2xl{
+  margin-left: 10px;;
+}
+
+
+.fa-solid.fa-trash.fa-2xl:hover{
+  color: red;
+}
