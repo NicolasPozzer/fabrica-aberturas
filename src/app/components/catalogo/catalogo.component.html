@@ -1,73 +1,39 @@
-<h1>test catalogo</h1>
-<div class="row justify-content-between my-4 mx-auto">
-    <div class="col-md mb-4" *ngFor="let Abertura of abertura">
-          <div class="cuadrante" [style.background-image]="'https://i.imgur.com/gfiqPDt.png'">
 
+<div  class="container">
+    <div  *ngFor="let Abertura of abertura; let i = index">
+        <div class="cuadrante" [style.background-image]="'url(' + 'https://i.imgur.com/jjfjMZ7.png' + ')'" type="button" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal' + i">
 
-<!--   <div class="cuadrante" [style.background-image]="'url(' + abertura.urlMiniatura + ')'">   -->
+            <!-- Modal -->
+            <div class="modal fade" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ Abertura.id }}</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ Abertura.tipo }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-        
-
-        <!-- <a href="{{ abertura.Modals }}"  target = "_blank">
+            <!-- <a href="{{ abertura.Modals }}"  target = "_blank">
                 <button  class="hover-hide-playdemo">
                 Play Demo
               </button>
             </a>-->
-            
-        <div class="hover-hide">
-          <h4 class="nombreE mx-auto">{{ Abertura.tipo }}</h4>
-        </div>
-    </div>
 
-</div>
-</div>
-
-
-
-<!-- Modal Detalles de la Abertura ->
-<div class="modal fade" id="newexperiencia-modalLabel" tabindex="-1" aria-labelledby="newexperiencia-modalLabel"
-aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="newexperiencia-modalLabel">Añadir Experiencia</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                    <label class="mt-2 mb-2" for="nombreE">Nombre de la Empresa.</label>
-                    <input type="text" class="form-control mb-4" id="nombreE" name="nombreE">
-                </div>
-
-                <div class="form-group">
-                    <label class="mt-2 mb-2" for="iniciO">Fecha de inicio(ej: 04/07/2022).</label>
-                    <input type="text" class="form-control mb-4" id="iniciO" name="iniciO">
-                </div>
-
-                <div class="form-group">
-                    <label class="mt-2 mb-2" for="fiN">Fecha de descenso(ej: 15/03/2023).</label>
-                    <input type="text" class="form-control mb-4" id="fiN" name="fiN">
-                </div>
-
-                <div class="form-group">
-                    <label class="mt-2 mb-2" for="marcA">Nombre de la Empresa.</label>
-                    <input type="text" class="form-control mb-4" id="marcA" name="marcA">
-                </div>
-
-                <div class="form-group">
-                    <label class="mt-2 mb-2" for="descripcionE">Descripcion de la experiencia dentro de la
-                        Empresa.</label>
-                    <input type="text" class="form-control mb-4" id="descripcionE" name="descripcionE"
-                        required>
-                </div>
-                <button class="btn btn-primary mt-4" data-bs-dismiss="modal">
-                    Agregar Experiencia Laboral
-                </button>
-            </form>
+            <div class="hover-hide">
+                <h4 class="nombreE">{{ Abertura.tipo }}</h4>
+            </div>
         </div>
 
     </div>
 </div>
-</div>-->
