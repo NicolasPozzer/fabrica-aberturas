@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { EditAberturaComponent } from './components/catalogo/edit-abertura/edit-abertura.component';
 import { NewAberturaComponent } from './components/catalogo/new-abertura/new-abertura.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     LoginComponent,
     EditAberturaComponent,
     NewAberturaComponent,
-    ContactoComponent
+    ContactoComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

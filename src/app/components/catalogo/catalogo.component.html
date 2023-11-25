@@ -18,11 +18,27 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ Abertura.id }}</h1>
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ Abertura.tipo }}</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ Abertura.nombre }}</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <div>
+                                <div id="foto-grande" [style.background-image]="'url(' + Abertura.urlFoto + ')'">
+                                </div>
+                                <div id="info-abertura">
+                                    <h3>Medidas: {{ Abertura.medidas }}</h3>
+                                    <p>{{ Abertura.detalles }}</p>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                        routerLink="/contacto">Consultar!</button>
+                                </div>
+                                <!--BODY-->
+
+                                <br><br><br><br><br><br><br><br><br>
+                                <!--BODY-->
+                                <h3>{{ Abertura.medidas }}</h3>
+                                <p>{{ Abertura.detalles }}</p>
+                                
+                            </div>
                             
                         </div>
                         <div class="modal-footer">
