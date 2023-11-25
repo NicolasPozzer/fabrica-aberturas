@@ -14,6 +14,7 @@ import { RedesComponent } from './components/redes/redes.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditAberturaComponent } from './components/catalogo/edit-abertura/edit-abertura.component';
 import { NewAberturaComponent } from './components/catalogo/new-abertura/new-abertura.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NewAberturaComponent } from './components/catalogo/new-abertura/new-abe
     RedesComponent,
     LoginComponent,
     EditAberturaComponent,
-    NewAberturaComponent
+    NewAberturaComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

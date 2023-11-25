@@ -20,17 +20,19 @@ export class NewAberturaComponent {
   constructor(private sAbertura: AberturaServiceService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
+  
   onCreate(): void {
     const abertura = new Abertura(this.nombre, this.tipo, this.detalles,this.medidas,this.precio,this.urlMiniatura,this.urlFoto);
     this.sAbertura.save(abertura).subscribe(
       data => {
-        alert("Proyecto añadido");
-        this.router.navigate(['']);
+        
+        
       }, err => {
-        alert("Error Falló agregar al Agregar Proyecto Campos Incompletos!!");
-        this.router.navigate(['']);
+        alert("Abertura añadida!!");
+        
       }
     )
   }

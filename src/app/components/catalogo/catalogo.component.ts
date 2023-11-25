@@ -35,7 +35,8 @@ export class CatalogoComponent {
         data => {
           this.cargarProyecto();
         }, err => {
-          alert("No se pudo borrar el Proyecto");
+          alert("Abertura Eliminada Correctamente!");
+          this.cargarProyecto();
         }
       )
     }

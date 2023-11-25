@@ -11,7 +11,7 @@
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
               <p class="text-white-50 mb-5">Por favor, ingresar usuario y clave</p>
 
-              <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+              <form #f="ngForm" (ngSubmit)="onLogin()" (keyup.enter)="onEnviar($event)" novalidate>
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                   <!--USUARIO-->
                   <div class="form-outline form-white mb-4">

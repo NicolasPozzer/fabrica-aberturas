@@ -14,7 +14,7 @@ export class EditAberturaComponent implements OnInit {
   abertura: Abertura = null;
 
   constructor(private sAbertura: AberturaServiceService, private activatedRouter: ActivatedRoute,
-    private router: Router,private tokenService: TokenService) { }
+    private router: Router, private tokenService: TokenService) { }
 
     isLogged = false;
   
@@ -41,7 +41,7 @@ export class EditAberturaComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-         alert("Error al modificar Proyecto");
+         alert("Abertura Modificada!");
          this.router.navigate(['']);
       }
     )

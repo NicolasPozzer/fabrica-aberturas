@@ -64,6 +64,11 @@
 
 /* Estilos adicionales */
 
+#button-agregar{
+  text-align: center;
+  margin-top: 10%;
+}
+
 .fa-solid.fa-trash.fa-2xl{
 margin-left: 30px;
 }
@@ -80,4 +85,12 @@ color: red;
 .fa-solid.fa-circle-plus:hover{
 
   color: rgba(0, 255, 132, 0.266);
+}
+
+.modal{
+  
+  /* ACA MODIFICAR EL MODAL ENTERO */
+
+  
+
 }

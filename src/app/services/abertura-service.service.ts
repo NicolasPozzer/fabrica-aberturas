@@ -33,7 +33,7 @@ export class AberturaServiceService {
   }
 
   public update(id: number, abertura: Abertura): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `/edit/${id}`, abertura);
+    return this.httpClient.put<any>(this.URL + `/edit`, abertura);
   }
 
   public delete(id: number): Observable<any>{

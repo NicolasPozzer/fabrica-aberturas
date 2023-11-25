@@ -1,27 +1,52 @@
 <!-- Modal1er Experiencia -->
-<div class="modal fade" id="newskill1-modalLabel" tabindex="-1" aria-labelledby="newskill1-modalLabel"
+<div class="modal fade" id="target" tabindex="-1" aria-labelledby="target"
   aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newskill1-modalLabel">Agregar Habilidad(Skill)</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="target">Agregar Habilidad(Skill)</h1>
+        
       </div>
       <div class="modal-body">
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
           <div class="form-group">
-            <label for="nombre">Nombre de la Habilidad</label>
+            <label for="nombre">Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
           </div>
+          <div class="form-group">
+            <label for="nombre">Tipo:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="tipo" required>
+          </div>
           <div class="form-group  mt-3">
-            <label for="porcentaje">Porcentaje de conocimiento(Solo numeros)</label>
-            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="detalles"
+            <label for="detalles">Detalles:</label>
+            <input type="text" class="form-control" id="detalles" name="detalles" [(ngModel)]="detalles"
               required>
           </div>
-          <button class="btn btn-primary mt-4" data-bs-dismiss="modal">
-            Agregar Habilidad
-          </button>
+          <div class="form-group">
+            <label for="medidas">Medidas:</label>
+            <input type="text" class="form-control" id="medidas" name="medidas" [(ngModel)]="medidas" required>
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="precio" required>
+          </div>
+          <div class="form-group">
+            <label for="urlMiniatura">URL de la Miniatura:</label>
+            <input type="urlMiniatura" class="form-control" id="urlMiniatura" name="urlMiniatura" [(ngModel)]="urlMiniatura" required>
+          </div>
+          <div class="form-group">
+            <label for="urlFoto">URL de La Imagen Grande:</label>
+            <input type="text" class="form-control" id="urlMiniatura" name="urlFoto" [(ngModel)]="urlFoto" required>
+          </div>
+            <button class="btn btn-primary mt-4">
+             Agregar
+            </button>
         </form>
+
+        <a href="">
+        <button class="btn btn-warning mt-4">
+         CERRAR
+        </button></a>
       </div>
 
     </div>

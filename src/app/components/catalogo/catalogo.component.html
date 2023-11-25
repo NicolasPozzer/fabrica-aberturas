@@ -1,14 +1,19 @@
-<div class="mx-auto" *ngIf="isLogged">
-    <i class="fa-solid fa-circle-plus mt-5 mb-2" type="button" data-bs-toggle="modal"
-      data-bs-target="#newskill2-modalLabel"></i>
+<div id="button-agregar" *ngIf="isLogged">
+    <i class="fa-solid fa-circle-plus" type="button" data-bs-toggle="modal"
+      data-bs-target="#target"></i>
   </div>
+  <app-new-abertura></app-new-abertura>
 
 <div  class="container">
     <div  *ngFor="let Abertura of abertura; let i = index">
-        <div class="cuadrante" [style.background-image]="'url(' + 'https://i.imgur.com/jjfjMZ7.png' + ')'" type="button" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal' + i">
+        <div class="cuadrante" [style.background-image]="'url(' + Abertura.urlMiniatura + ')'" type="button" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal' + i">
 
-            <!-- Modal -->
-            <div class="modal fade" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
+            
+
+            <!--==========================================================
+            =========================== Modal ============================
+            ============================================================-->
+            <div class="modal" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -21,18 +26,18 @@
                             
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" routerLink="/contacto">Consultar!</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- <a href="{{ abertura.Modals }}"  target = "_blank">
-                <button  class="hover-hide-playdemo">
-                Play Demo
-              </button>
-            </a>-->
+            <!--==========================================================
+            ==============================================================
+            ============================================================-->
+
+
+
 
             <div class="hover-hide">
                 <h4 class="nombreE">{{ Abertura.tipo }}</h4>
@@ -40,8 +45,8 @@
             
         </div>
         <div class="mx-auto mt-4" *ngIf="isLogged" id="pencil-trash">
-            <button class="btn btn-light" routerLink="/editproject/{{ Abertura.id }}">
-              <i class="bi bi-pencil-fill">EDITAR</i>
+            <button class="btn btn-light" routerLink="/aberturas/edit/{{ Abertura.id }}">
+              <i>EDITAR</i>
             </button>
             <i class="fa-solid fa-trash fa-2xl" type="button" data-bs-toggle="modal" (click)="delete(Abertura.id)"></i>
           </div>
@@ -49,4 +54,3 @@
     </div>
 </div>
 
-<app-new-abertura></app-new-abertura>

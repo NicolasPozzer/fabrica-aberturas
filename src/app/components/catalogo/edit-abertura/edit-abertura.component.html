@@ -3,20 +3,40 @@
   <div class="row">
       <div>
           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div id="ocultar" class="form-group mt-4 mb-3">
+              <label class="mb-1" for="id">NO MODIFICAR!!!</label>
+              <input type="number" class="form-control" id="id" name="id" [(ngModel)]="abertura.id" disabled required>
+          </div>
               <div class="form-group mt-4 mb-3">
-                  <label class="mb-1" for="nombreE">Nombre del Proyecto</label>
+                  <label class="mb-1" for="nombre">Nombre de la Abertura:</label>
                   <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="abertura.nombre" required>
               </div>
               <div class="form-group mt-4 mb-3">
-                  <label class="mb-1" for="tipo">Url Imagen de fondo</label>
+                  <label class="mb-1" for="tipo">Tipo:</label>
                   <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="abertura.tipo" required>
               </div>
               <div class="form-group mt-4 mb-3">
-                <label class="mb-1" for="urlFoto">Url de la Demo</label>
-                <input type="text" class="form-control" id="urlFoto" name="urlFoto" [(ngModel)]="abertura.urlFoto" [(ngModel)]="abertura.urlMiniatura"[(ngModel)]="abertura.detalles"[(ngModel)]="abertura.precio" required>
+                <label class="mb-1" for="detalles">Detalles:</label>
+                <input type="text" class="form-control" id="detalles" name="detalles" [(ngModel)]="abertura.detalles" required>
             </div>
+            <div class="form-group mt-4 mb-3">
+              <label class="mb-1" for="medidas">Medidas:</label>
+              <input type="text" class="form-control" id="medidas" name="medidas" [(ngModel)]="abertura.medidas" required>
+            </div>
+            <div class="form-group mt-4 mb-3">
+              <label class="mb-1" for="precio">Precio:</label>
+              <input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="abertura.precio" required>
+            </div>
+              <div class="form-group mt-4 mb-3">
+                <label class="mb-1" for="urlMiniatura">Url de la Miniatura:</label>
+                <input type="text" class="form-control" id="urlMiniatura" name="urlMiniatura" [(ngModel)]="abertura.urlMiniatura" required>
+            </div>
+            <div class="form-group mt-4 mb-3">
+              <label class="mb-1" for="urlFoto">Url de la Imagen Grande:</label>
+              <input type="text" class="form-control" id="urlFoto" name="urlFoto" [(ngModel)]="abertura.urlFoto" required>
+          </div>
               <button class="btn btn-primary mt-4">
-                  Actualizar Proyecto
+                  Actualizar Abertura
               </button>
           </form>
       </div>
