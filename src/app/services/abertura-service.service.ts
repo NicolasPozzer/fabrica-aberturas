@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Abertura } from '../model/abertura';
+import { Abertura } from '../components/model/abertura';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AberturaServiceService {
 
-  private URL = 'http://localhost:8080/aberturas';
+  URL = 'http://localhost:8080/aberturas';
 
   constructor(private httpClient: HttpClient) { }
 

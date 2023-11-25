@@ -1,0 +1,34 @@
+/*==========================*/
+/*COLORES LOGOS REDES*/
+/*==========================*/
+
+
+
+
+
+
+
+/*LINKEDIN*/
+.fa-brands.fa-linkedin.fa-2xl:hover{
+    color: rgb(7, 145, 209);
+    cursor: pointer;
+}
+/*GITHUB*/
+.fa-brands.fa-github.fa-2xl:hover{
+    color:#d1d1d1;
+    cursor: pointer;
+}
+
+/*INSTAGRAM*/
+.fa-brands.fa-instagram.fa-2xl:hover{
+    color: rgba(255, 0, 106, 0.397);
+    cursor: pointer;
+
+
+}
+
+/*borra recuadro de cada red*/
+.list-group{
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+}

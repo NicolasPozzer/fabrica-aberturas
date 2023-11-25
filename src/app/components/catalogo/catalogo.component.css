@@ -62,3 +62,22 @@
 
 
 
+/* Estilos adicionales */
+
+.fa-solid.fa-trash.fa-2xl{
+margin-left: 30px;
+}
+
+.fa-solid.fa-trash.fa-2xl:hover{
+color: red;
+}
+
+.fa-solid.fa-circle-plus{
+  font-size: 28px;
+  color: rgba(0, 255, 140, 0.717);
+}
+
+.fa-solid.fa-circle-plus:hover{
+
+  color: rgba(0, 255, 132, 0.266);
+}

@@ -1,0 +1,29 @@
+<!-- Modal1er Experiencia -->
+<div class="modal fade" id="newskill1-modalLabel" tabindex="-1" aria-labelledby="newskill1-modalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="newskill1-modalLabel">Agregar Habilidad(Skill)</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombre">Nombre de la Habilidad</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+          </div>
+          <div class="form-group  mt-3">
+            <label for="porcentaje">Porcentaje de conocimiento(Solo numeros)</label>
+            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="detalles"
+              required>
+          </div>
+          <button class="btn btn-primary mt-4" data-bs-dismiss="modal">
+            Agregar Habilidad
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

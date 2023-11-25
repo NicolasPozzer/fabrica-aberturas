@@ -1,0 +1,59 @@
+/*==========================*/
+/*Color NavBar*/
+/*==========================*/
+.navbar.navbar-expand-lg.bg-body-tertiary{
+    background-color: #363636;background-image: linear-gradient(90deg, #535353 0%, #535353 100%);
+}
+
+
+/*-------------------------------------*/
+/*--------ESTILO FADE BOTON--------------*/
+/*-------------------------------------*/
+.boton-descargar-cv {
+    margin-left: 2%;
+    
+    cursor: pointer;
+    border: none;
+    padding: 11px 22px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 25px;
+    nav-index: auto;
+}
+
+
+/* Agrega un borde sólido al elemento */
+.boton-descargar-cv:hover::before {
+    nav-index: auto;
+    content: "";
+    position: absolute;
+    top: -3;
+    left: -2;
+    z-index: 1;
+    width: 70%;
+    height: 70%;
+    opacity: 38%;
+    background: linear-gradient(
+        45deg,
+        #1c8eff,#16ffdcf0, #1c8eff,#16ffdcf0,
+        #1c8eff,#16ffdcf0, #1c8eff,#16ffdcf0
+    );
+    background-size: 800%;
+    border-radius: 15px;
+    filter: blur(8px);
+    animation: glowing 70s linear infinite;
+}
+
+@keyframes glowing  {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }

@@ -1,0 +1,28 @@
+<ul class="list-group list-group-horizontal">
+    <a href="https://www.instagram.com/nicolaspozzer7/" target="_blank">
+        <li class="list-group-item">
+            <i class="fa-brands fa-instagram fa-2xl">
+            </i>
+        </li>
+    </a>
+    <a href="https://www.linkedin.com/in/nicolaspozzer/" target="_blank">
+        <li class="list-group-item">
+            <i class="fa-brands fa-linkedin fa-2xl">
+
+            </i>
+        </li>
+    </a>
+    <a href="https://github.com/NicolasPozzer" target="_blank">
+        <li class="list-group-item">
+            <i class="fa-brands fa-github fa-2xl">
+
+            </i>
+        </li>
+    </a>
+
+        <!-- Button que lleva al login -->
+    <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+    <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+    
+</ul>
+

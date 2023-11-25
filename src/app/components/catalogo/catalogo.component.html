@@ -1,3 +1,7 @@
+<div class="mx-auto" *ngIf="isLogged">
+    <i class="fa-solid fa-circle-plus mt-5 mb-2" type="button" data-bs-toggle="modal"
+      data-bs-target="#newskill2-modalLabel"></i>
+  </div>
 
 <div  class="container">
     <div  *ngFor="let Abertura of abertura; let i = index">
@@ -33,7 +37,16 @@
             <div class="hover-hide">
                 <h4 class="nombreE">{{ Abertura.tipo }}</h4>
             </div>
+            
         </div>
+        <div class="mx-auto mt-4" *ngIf="isLogged" id="pencil-trash">
+            <button class="btn btn-light" routerLink="/editproject/{{ Abertura.id }}">
+              <i class="bi bi-pencil-fill">EDITAR</i>
+            </button>
+            <i class="fa-solid fa-trash fa-2xl" type="button" data-bs-toggle="modal" (click)="delete(Abertura.id)"></i>
+          </div>
 
     </div>
 </div>
+
+<app-new-abertura></app-new-abertura>
