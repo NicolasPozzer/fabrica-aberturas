@@ -17,6 +17,9 @@ import { NewAberturaComponent } from './components/catalogo/new-abertura/new-abe
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PuertaInteriorExteriorComponent } from './components/puerta-interior-exterior/puerta-interior-exterior.component';
+import { PuertaIntComponent } from './components/puerta-interior-exterior/puerta-int/puerta-int.component';
+import { PuertaExtComponent } from './components/puerta-interior-exterior/puerta-ext/puerta-ext.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { FooterComponent } from './components/footer/footer.component';
     NewAberturaComponent,
     ContactoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PuertaInteriorExteriorComponent,
+    PuertaIntComponent,
+    PuertaExtComponent
   ],
   imports: [
     BrowserModule,

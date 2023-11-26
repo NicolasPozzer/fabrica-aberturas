@@ -28,6 +28,7 @@
     
     opacity: 0;
     text-align: center;
+    
   }
 
 
@@ -57,7 +58,8 @@
     border-radius: 12px;
     background-size: cover;
     background-position: center;
-  
+    
+    
 }
 
 
@@ -113,3 +115,5 @@ color: red;
   margin-left: 40%;
   margin-right: 10%;
 }
+
+

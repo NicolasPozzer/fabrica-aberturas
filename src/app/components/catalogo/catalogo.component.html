@@ -13,7 +13,7 @@
             <!--==========================================================
             =========================== Modal ============================
             ============================================================-->
-            <div class="modal" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div id="img" class="modal" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -28,21 +28,22 @@
                                 <div id="info-abertura">
                                     <h3>Medidas: {{ Abertura.medidas }}</h3>
                                     <p>{{ Abertura.detalles }}</p>
+                                    <h4>Precio: ${{Abertura.precio}}</h4>
+                                    <br>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                        routerLink="/contacto">Consultar!</button>
+                                        routerLink="/contacto">Consultar</button>
+                                        <br><br><br>
                                 </div>
                                 <!--BODY-->
 
                                 <br><br><br><br><br><br><br><br><br>
                                 <!--BODY-->
-                                <h3>{{ Abertura.medidas }}</h3>
-                                <p>{{ Abertura.detalles }}</p>
-                                
+                                <p>Materiales de Algarrobo Puro, fuerte y resistente a todo tipo humedad.</p>
                             </div>
                             
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" routerLink="/contacto">Consultar!</button>
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Volver</button>
                         </div>
                     </div>
                 </div>
