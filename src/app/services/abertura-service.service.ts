@@ -8,7 +8,8 @@ import { Abertura } from '../components/model/abertura';
 })
 export class AberturaServiceService {
 
-  URL = 'http://localhost:8080/aberturas';
+  //URL = 'http://localhost:8080/auth';
+  URL = 'https://jose-backend.onrender.com/auth';
 
   constructor(private httpClient: HttpClient) { }
 

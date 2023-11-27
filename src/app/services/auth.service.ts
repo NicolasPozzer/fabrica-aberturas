@@ -10,7 +10,9 @@ import { JwtDto } from '../components/model/jwt-dto';
 })
 export class AuthService {
   
-  URL = 'http://localhost:8080/auth';
+  //URL = 'http://localhost:8080/auth';
+  URL = 'https://jose-backend.onrender.com/auth';
+  
 
 
   constructor(private httpClient: HttpClient) { }
